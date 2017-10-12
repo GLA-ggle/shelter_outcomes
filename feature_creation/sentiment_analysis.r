@@ -4,7 +4,6 @@
 library ('RSentiment') #library used for sentiment analysis
 library('plyr')
 library('dplyr')
-library('ggplot2')
 
 #read in csv
 train <- read.csv('M:\\Python Scripts\\Kaggle\\shelter-outcomes\\data\\train.csv')
@@ -12,14 +11,8 @@ train <- read.csv('M:\\Python Scripts\\Kaggle\\shelter-outcomes\\data\\train.csv
 #calculate frequency of unique names (perhaps names could be tidied prior to this step)
 names<- count(train["Name"])
 
-#look at 'names'
-head(names)
-
 #using RSentiment, calculate score (numerical and descriptive) for each unique name
 names.sentiment <- cbind(names,calculate_score(names$Name),calculate_sentiment(names$Name))
-
-#look at result
-head(names.sentiment)
 
 #subset to keep columns required
 names.sentiment<-names.sentiment[,c("Name","calculate_score(names$Name)","sentiment")]
