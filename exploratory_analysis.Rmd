@@ -3,10 +3,7 @@ title: "Shelter outcomes exploratory analysis"
 output: html_notebook
 ---
 
-This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook. When you execute code within the notebook, the results appear beneath the code. 
-
-Try executing this chunk by clicking the *Run* button within the chunk or by placing your cursor inside it and pressing *Cmd+Shift+Enter*. 
-
+## Marta
 ```{r}
 train_data <- read.csv("train_master.csv",stringsAsFactors = F)
 head(train_data)
@@ -15,21 +12,21 @@ head(train_data)
 hist(train_data$hour_date, breaks = 24)
 ```
 
+## Sean
 ```{r}
 hist(train_data$age_years, breaks = 100)
 ```
-Add a new chunk by clicking the *Insert Chunk* button on the toolbar or by pressing *Cmd+Option+I*.
+
+## Joe
 ```{r}
 train_data <- read.csv("train_master.csv", stringsAsFactors = F)
 names(train_data)
-boxplot(train_data$Age_Days)
+boxplot(train_data$Age_Days, horizontal = TRUE)
 ```
 
-When you save the notebook, an HTML file containing the code and output will be saved alongside it (click the *Preview* button or press *Cmd+Shift+K* to preview the HTML file).
-
-
-Anna's analysis:
+## Anna
 ```{r}
+install.packages("ggplot2")
 library(ggplot2)
 ggplot(train_data, aes(x= Life_Stage, y= OutcomeType, colour = factor(hairtype)))+geom_point(size = 0.1)+geom_jitter()+scale_fill_brewer(palette = "Blues")
 ```
