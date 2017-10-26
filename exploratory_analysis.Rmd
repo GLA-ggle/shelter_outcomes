@@ -24,6 +24,6 @@ When you save the notebook, an HTML file containing the code and output will be 
 Anna's analysis:
 ```{r}
 library(ggplot2)
-ggplot(train_data, aes(x= hairtype, y= age_years , fill = factor(mixed_breed)))
+ggplot(train_data, aes(x= Life_Stage, y= OutcomeType, colour = factor(hairtype)))+geom_point(size = 0.1)+geom_jitter()+scale_fill_brewer(palette = "Blues")
 ```
 
