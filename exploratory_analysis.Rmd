@@ -11,7 +11,9 @@ Try executing this chunk by clicking the *Run* button within the chunk or by pla
 train_data <- read.csv("train_master.csv",stringsAsFactors = F)
 head(train_data)
 ```
-
+```{r}
+hist(train_data$hour_date, breaks = 24)
+```
 
 ```{r}
 hist(train_data$age_years, breaks = 100)
