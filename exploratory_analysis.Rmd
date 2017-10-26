@@ -19,6 +19,11 @@ hist(train_data$hour_date, breaks = 24)
 hist(train_data$age_years, breaks = 100)
 ```
 Add a new chunk by clicking the *Insert Chunk* button on the toolbar or by pressing *Cmd+Option+I*.
+```{r}
+train_data <- read.csv("train_master.csv", stringsAsFactors = F)
+names(train_data)
+boxplot(train_data$Age_Days)
+```
 
 When you save the notebook, an HTML file containing the code and output will be saved alongside it (click the *Preview* button or press *Cmd+Shift+K* to preview the HTML file).
 
