@@ -1,3 +1,6 @@
+Thumbs.db
+.DS_Store
+*.nb.html
 *.Rproj
 .Rproj.user
 .Rhistory
