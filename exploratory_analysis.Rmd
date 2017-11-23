@@ -32,3 +32,16 @@ train_data <- read.csv("train_master.csv", stringsAsFactors = F)
 ggplot(train_data, aes(x= Life_Stage, y= OutcomeType, colour = factor(hairtype)))+geom_point(size = 0.1)+geom_jitter()+scale_fill_brewer(palette = "Blues")
 ```
 
+## Rich
+```{r}
+library(ggplot2)
+train_data <- read.csv("train_master.csv", stringsAsFactors = F)
+hist(train_data$age_years, breaks = 100)
+```
+
+
+
+
+
+
+
