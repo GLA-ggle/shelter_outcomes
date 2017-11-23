@@ -28,7 +28,7 @@ boxplot(train_data$Age_Days)
 When you save the notebook, an HTML file containing the code and output will be saved alongside it (click the *Preview* button or press *Cmd+Shift+K* to preview the HTML file).
 
 
-Anna's analysis:
+Anna's analysis using ggplot - think this is unhelpful diagram:
 ```{r}
 library(ggplot2)
 ggplot(train_data, aes(x= Life_Stage, y= OutcomeType, colour = factor(hairtype)))+geom_point(size = 0.1)+geom_jitter()+scale_fill_brewer(palette = "Blues")
