@@ -2,6 +2,7 @@ train <- read.csv('train.csv', stringsAsFactors = F)
 test <- read.csv('test.csv', stringsAsFactors = F)
 train <- read.csv('train.csv', stringsAsFactors = T)
 test <- read.csv('test.csv', stringsAsFactors = T)
+#test test test
 attributes(train)
 attributes(test)
 summary(train)
